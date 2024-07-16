@@ -13,6 +13,9 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+
+import AmazonFrameWorkDesign.pageObjects.LandingPage;
+
 import org.openqa.selenium.JavascriptExecutor;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -21,7 +24,7 @@ public class StandAloneTest {
 
 	public static void main(String[] args) throws InterruptedException {
 		String ProductName = "SAMSUNG";
-		String subProductName = "Galaxy Buds FE";
+		String subProductName = "Galaxy Buds";
 
 		// Setup ChromeDriver using WebDriverManager
 		WebDriverManager.chromedriver().setup();
@@ -32,14 +35,17 @@ public class StandAloneTest {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
 		// Navigate to Amazon
-		driver.get("https://www.amazon.com");
+//		driver.get("https://www.amazon.com");
 
-		// Perform login
-		driver.findElement(By.id("nav-link-accountList")).click();
-		driver.findElement(By.id("ap_email")).sendKeys("mahmoudeid1840@gmail.com");
-		driver.findElement(By.id("continue")).click();
-		driver.findElement(By.id("ap_password")).sendKeys("Berlin@1234567");
-		driver.findElement(By.id("signInSubmit")).click();
+		LandingPage landingPage= new LandingPage(driver);
+		landingPage.goToWebsite();
+		landingPage.login("mahmoudeid1840@gmail.com","Berlin@1234567");
+		// Perform login/* replaced*/
+//		driver.findElement(By.id("nav-link-accountList")).click();
+//		driver.findElement(By.id("ap_email")).sendKeys("mahmoudeid1840@gmail.com");
+//		driver.findElement(By.id("continue")).click();
+//		driver.findElement(By.id("ap_password")).sendKeys("Berlin@1234567");
+//		driver.findElement(By.id("signInSubmit")).click();
 
 		// Add Samsung product to the search bar
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
