@@ -39,12 +39,14 @@ public class LandingPage extends AbstractComponents {
 		driver.get("https://www.amazon.com");
 
 	}
-	public void login(String email,String password) {
+	public ProductCatalogue login(String email,String password) {
 		SignInElement.click();
 		MailElement.sendKeys(email);
 		continueElement.click();
         PasswordElement.sendKeys(password);
         SubmitElement.click();
+		ProductCatalogue productCatalogue = new ProductCatalogue(driver);
+        return productCatalogue;
 
 	}
 	

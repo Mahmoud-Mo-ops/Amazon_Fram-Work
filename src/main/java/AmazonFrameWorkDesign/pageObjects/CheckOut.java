@@ -10,8 +10,8 @@ import AmazonFrameWorkDesign.AbstarctComponents.AbstractComponents;
 public class CheckOut extends AbstractComponents {
 	WebDriver driver;
 
-	@FindBy(css = "#sc-buy-box-ptc-button .a-button-input")
-	WebElement dropdownButton;
+//	@FindBy(css = "#sc-buy-box-ptc-button .a-button-input")
+//	WebElement dropdownButton;
 
 	@FindBy(css = ".a-dropdown-container .a-button-inner:nth-child(1)")
 	WebElement dropdownElement;
@@ -61,22 +61,16 @@ public class CheckOut extends AbstractComponents {
 	}
 
 	public void selectCountry() throws InterruptedException {
-		dropdownButton.click();
-		Thread.sleep(1000);
+//		Thread.sleep(1000);
 		dropdownElement.click();
 		Thread.sleep(1000);
 		selectEgypt.click();
 		Thread.sleep(1000);
-
-//		waitForElement(dropDown);
-
-
 	}
 
 	public void entryData(String fullname, String phoneNumberText, String addressText, String buildingNameText,
 			String addressCityText, String addressDistrictText, String addressStateText, String governorateText,
 			String landmarkText) {
-		//Thread.sleep(1000);
 
 		name.sendKeys(fullname);
 		phoneNumber.sendKeys(phoneNumberText);
@@ -93,9 +87,10 @@ public class CheckOut extends AbstractComponents {
 		submitButton.click();
 	}
 
-	public void validateNumberOfProduct() {
+	public boolean  validateNumberOfProduct() {
 		ShoppingCart shoppingCart = new ShoppingCart(driver);
         String selectedProductNumber = shoppingCart.numberOfProducts();
-		Assert.assertEquals(selectedProductNumber, checkedOutProduct, "Mismatch in the number of products.");
+        boolean NumberOfItems = selectedProductNumber.equals(checkedOutProduct);
+        return NumberOfItems;
 	}
 }

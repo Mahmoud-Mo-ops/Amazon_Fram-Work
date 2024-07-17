@@ -75,8 +75,11 @@ public class ProductCatalogue extends AbstractComponents {
 		Thread.sleep(5000);
 	}
 	
-	public void clickOnCard() {
-		goToCard.click(); 
+	//reusable and common usage //would be better to add to abstract
+	public ShoppingCart clickOnCard() {
+		goToCard.click();
+		ShoppingCart shoppingCart = new ShoppingCart(driver);
+		return shoppingCart;
 
 	}
 }

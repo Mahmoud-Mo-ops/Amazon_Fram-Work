@@ -2,6 +2,7 @@ package AmazonFrameWorkDesign.pageObjects;
 
 import java.util.List;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -18,33 +19,47 @@ public class ShoppingCart extends AbstractComponents {
 		PageFactory.initElements(driver, this);
 	}
 
-
-	@FindBy(css = "sc-list-item-content-inner .a-truncate-cut")
+	@FindBy(css = "#sc-buy-box-ptc-button .a-button-input")
+	WebElement proceedToCheckOut;
+	@FindBy(css = ".sc-list-item-content-inner .a-truncate-cut")
 	List<WebElement> addedElementsToCart;
 
-	@FindBy(id="sc-subtotal-label-buybox")
+	@FindBy(id = "sc-subtotal-label-buybox")
 	WebElement selectedProductText;
+
 	public boolean verifyProduct(String ProductName) {
 		boolean match = addedElementsToCart.stream()
 				.anyMatch(addedElementToCart -> addedElementToCart.getText().contains(ProductName));
 		return match;
 
 	}
-	
+
 	public String numberOfProducts() {
-		//In the context of your ShoppingCart class, when you write this.selectedProductText.getText(), you are explicitly referring to the selectedProductText field (which is a WebElement defined in your class) and calling its getText() method. This ensures that you are accessing the WebElement instance variable of the class and fetching its visible text content.
-	    String selectedProductText =this.selectedProductText.getText(); // Get the text content from WebElement
+		// In the context of your ShoppingCart class, when you write
+		// this.selectedProductText.getText(), you are explicitly referring to the
+		// selectedProductText field (which is a WebElement defined in your class) and
+		// calling its getText() method. This ensures that you are accessing the
+		// WebElement instance variable of the class and fetching its visible text
+		// content.
+		String selectedProductText = this.selectedProductText.getText(); // Get the text content from WebElement
 
-	    // Extract the number of items
-	    int startIndex = selectedProductText.indexOf('(');
-	    int endIndex = selectedProductText.indexOf(')');
-	    
-	    if (startIndex == -1 || endIndex == -1 || startIndex >= endIndex) {
-	        return ""; // Handle case where '(' or ')' is not found or in incorrect order
-	    }
+		// Extract the number of items
+		int startIndex = selectedProductText.indexOf('(');
+		int endIndex = selectedProductText.indexOf(')');
 
-	    String selectedProductNumber = selectedProductText.substring(startIndex + 1, endIndex).trim();
-	    return selectedProductNumber;
-			}
+		if (startIndex == -1 || endIndex == -1 || startIndex >= endIndex) {
+			return ""; // Handle case where '(' or ')' is not found or in incorrect order
+		}
+
+		String selectedProductNumber = selectedProductText.substring(startIndex + 1, endIndex).trim();
+		return selectedProductNumber;
+	}
+
+	public CheckOut proceedToCheckout() {
+		proceedToCheckOut.click();
+		CheckOut checkOut = new CheckOut(driver);
+		return checkOut;
+		
+	}
 
 }
