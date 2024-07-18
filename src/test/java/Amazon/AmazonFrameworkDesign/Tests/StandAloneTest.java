@@ -1,4 +1,4 @@
-package Amazon.AmazonFrameworkDesign;
+package Amazon.AmazonFrameworkDesign.Tests;
 
 import java.time.Duration;
 import java.util.List;

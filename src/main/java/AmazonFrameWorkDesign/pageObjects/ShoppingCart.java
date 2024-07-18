@@ -34,13 +34,7 @@ public class ShoppingCart extends AbstractComponents {
 
 	}
 
-	public String numberOfProducts() {
-		// In the context of your ShoppingCart class, when you write
-		// this.selectedProductText.getText(), you are explicitly referring to the
-		// selectedProductText field (which is a WebElement defined in your class) and
-		// calling its getText() method. This ensures that you are accessing the
-		// WebElement instance variable of the class and fetching its visible text
-		// content.
+	public String numberOfProducts() {	
 		String selectedProductText = this.selectedProductText.getText(); // Get the text content from WebElement
 
 		// Extract the number of items

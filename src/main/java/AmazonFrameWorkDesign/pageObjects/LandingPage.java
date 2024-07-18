@@ -1,8 +1,5 @@
 package AmazonFrameWorkDesign.pageObjects;
 
-//import org.openqa.selenium.By;
-//import org.openqa.selenium.WebDriver;
-//import org.openqa.selenium.WebElement;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -39,6 +36,7 @@ public class LandingPage extends AbstractComponents {
 		driver.get("https://www.amazon.com");
 
 	}
+	
 	public ProductCatalogue login(String email,String password) {
 		SignInElement.click();
 		MailElement.sendKeys(email);
