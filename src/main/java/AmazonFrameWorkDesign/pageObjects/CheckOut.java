@@ -93,4 +93,5 @@ public class CheckOut extends AbstractComponents {
         boolean NumberOfItems = selectedProductNumber.equals(checkedOutProduct);
         return NumberOfItems;
 	}
+
 }

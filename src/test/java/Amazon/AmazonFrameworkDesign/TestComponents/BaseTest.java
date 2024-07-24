@@ -9,6 +9,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 
 import AmazonFrameWorkDesign.pageObjects.LandingPage;
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -16,6 +18,8 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class BaseTest {
 
 	public WebDriver driver;
+	public LandingPage landing;
+	public LandingPage SignInElement;
 
 	public WebDriver initializeDriver() throws IOException {
 		Properties property = new Properties();
@@ -45,11 +49,19 @@ public class BaseTest {
 
 	}
 
+	@BeforeMethod(alwaysRun=true)
 	public LandingPage launchApplication() throws IOException {
-	  initializeDriver();
-		LandingPage landingPage = new LandingPage(driver);
-		landingPage.goToWebsite();
-		return landingPage;
+		driver = initializeDriver();
+		landing = new LandingPage(driver);
+		landing.goToWebsite();
+		landing.click();
+		return landing;
+
+	}
+
+	@AfterMethod
+	public void teardown() {
+		// driver.close();
 	}
 
 }

@@ -24,12 +24,12 @@ public class ShoppingCart extends AbstractComponents {
 	@FindBy(css = ".sc-list-item-content-inner .a-truncate-cut")
 	List<WebElement> addedElementsToCart;
 
-	@FindBy(id = "sc-subtotal-label-buybox")
+	@FindBy(css ="#sc-subtotal-label-buybox")
 	WebElement selectedProductText;
 
-	public boolean verifyProduct(String ProductName) {
+	public boolean verifyProduct(String subProductName) {
 		boolean match = addedElementsToCart.stream()
-				.anyMatch(addedElementToCart -> addedElementToCart.getText().contains(ProductName));
+				.anyMatch(addedElementToCart -> addedElementToCart.getText().contains(subProductName));
 		return match;
 
 	}

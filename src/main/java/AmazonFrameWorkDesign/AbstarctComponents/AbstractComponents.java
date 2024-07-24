@@ -22,6 +22,7 @@ public class AbstractComponents {
 		wait.until(ExpectedConditions.visibilityOfAllElements(Elements));
 	}
 
+	//Wait for siungleElement
 	public void waitForElement(WebElement Element) {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.visibilityOf(Element));
