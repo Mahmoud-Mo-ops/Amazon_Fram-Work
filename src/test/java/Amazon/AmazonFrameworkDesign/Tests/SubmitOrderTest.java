@@ -1,45 +1,58 @@
 package Amazon.AmazonFrameworkDesign.Tests;
 
+import java.io.File;
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.List;
 
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.testng.Assert;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import Amazon.AmazonFrameworkDesign.TestComponents.BaseTest;
 import AmazonFrameWorkDesign.pageObjects.CheckOut;
-import AmazonFrameWorkDesign.pageObjects.LandingPage;
 import AmazonFrameWorkDesign.pageObjects.ProductCatalogue;
 import AmazonFrameWorkDesign.pageObjects.ShoppingCart;
 
 public class SubmitOrderTest extends BaseTest {
 	String ProductName = "SAMSUNG";
 	String subProductName = "Galaxy Buds";
-	@Test
-	public void SubmitOrderTest() throws IOException, InterruptedException {
-		
-		ProductCatalogue productCatalogue = landing.login("mahmoudeid1840@gmail.com", "Berlin@1234567");
-		productCatalogue.searchField(ProductName);
-		productCatalogue.findProductByName(subProductName);
-		productCatalogue.addProductToCart(subProductName);
-		ShoppingCart shoppingCar = productCatalogue.clickOnCard();
 
+	@Test(dataProvider = "getData", groups = { "Purchase" })
+	public void submitOrderTest(HashMap<String, String> input) throws IOException, InterruptedException {
+
+		ProductCatalogue productCatalogue = landing.login(input.get("email"), input.get("password"));
+		productCatalogue.searchField(input.get("ProductName"));
+		productCatalogue.findProductByName(input.get("subProductName"));
+		productCatalogue.addProductToCart(input.get("subProductName"));
+		ShoppingCart shoppingCar = productCatalogue.clickOnCard();
 		shoppingCar.numberOfProducts();
 		CheckOut checkOut = shoppingCar.proceedToCheckout();
 		checkOut.selectCountry();
-		checkOut.entryData("Mahmoud", "01090432848", "Kafr Asch-Schaich,Gehan Street, next to Elfath Hospital",
-				"Eid , 6", "Kafr El Sheikh", "Kafr El Sheikh", "Kafr El Sheikh", "Kafr El Sheikh", "Elfahth hospital");
+		checkOut.entryData("Mahmoud", "01090432848", "Kafr Asch-Schaich, Gehan Street, next to Elfath Hospital",
+				"Eid /6", "Kafr El Sheikh", "Kafr El Sheikh", "Kafr El Sheikh", "Kafr El Sheikh", "Elfahth hospital");
 		checkOut.submitAdresse();
-		//ERROR
-//		boolean NumberOfItems = checkOut.validateNumberOfProduct();
-//		Assert.assertTrue(NumberOfItems);
-  	}
-	
-	
-	@Test(dependsOnMethods={"SubmitOrderTest"})
+
+		boolean NumberOfItems = checkOut.validateNumberOfProduct();
+		Assert.assertTrue(NumberOfItems);
+	}
+
+	@Test(dependsOnMethods = { "submitOrderTest" })
 	public void OrderHistoryTest() {
 		ProductCatalogue productCatalogue = landing.login("mahmoudeid1840@gmail.com", "Berlin@1234567");
 		ShoppingCart shoppingCar = productCatalogue.clickOnCard();
 		boolean match = shoppingCar.verifyProduct(ProductName);
-		Assert.assertTrue(match);	
-		}
+		Assert.assertTrue(match);
+	}
+
+
+	@DataProvider
+	public Object[][] getData() throws IOException {
+		String path = System.getProperty("user.dir") + "/src/test/java/AmazonFrameWorkDesign/data/Order.json";
+		List<HashMap<String, String>> data = getJsonDataToMap(path);
+		return new Object[][] { { data.get(0) }, { data.get(1) } };
+	}
 }

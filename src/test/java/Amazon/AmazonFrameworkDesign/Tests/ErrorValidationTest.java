@@ -1,4 +1,5 @@
 package Amazon.AmazonFrameworkDesign.Tests;
+import Amazon.AmazonFrameworkDesign.TestComponents.Retry;
 
 import java.io.IOException;
 
@@ -12,7 +13,7 @@ import AmazonFrameWorkDesign.pageObjects.ShoppingCart;
 
 public class ErrorValidationTest extends BaseTest {
 
-	@Test(groups= {"ErrorValidaion"})
+	@Test(groups= {"ErrorValidaion"},retryAnalyzer=Retry.class)
 	public void loginErrorValidation() throws IOException, InterruptedException {
 		ProductCatalogue productCatalogue = landing.login("mahmoudei@gmail.com","Berlin@1234567");
 
