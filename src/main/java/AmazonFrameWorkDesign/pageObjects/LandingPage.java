@@ -32,10 +32,11 @@ public class LandingPage extends AbstractComponents {
 
 	@FindBy(id="signInSubmit")
 	WebElement SubmitElement;
-	
-	@FindBy(css="ul[class='a-unordered-list a-nostyle a-vertical a-spacing-none'] span[class='a-list-item']")
+	//h4[@class='a-alert-heading' and text()='There was a problem']
+
+	@FindBy(xpath="//h4[@class='a-alert-heading' and text()='There was a problem']")
 	WebElement errorMailMessage;
-	
+
 	public void goToWebsite() {
 		driver.get("https://www.amazon.com");
 
@@ -57,7 +58,14 @@ public class LandingPage extends AbstractComponents {
 
 	}
 	
-	public String catchError() {
+	//method for just enter invalid mail 
+	public void inValidLogin(String email) {
+		MailElement.sendKeys(email);
+		continueElement.click();
+	}
+	
+	public String catchError() throws InterruptedException {
+		Thread.sleep(5000);
 		waitForElement(errorMailMessage);
 		return errorMailMessage.getText();
 	}	

@@ -10,8 +10,8 @@ import AmazonFrameWorkDesign.AbstarctComponents.AbstractComponents;
 public class CheckOut extends AbstractComponents {
 	WebDriver driver;
 
-//	@FindBy(css = "#sc-buy-box-ptc-button .a-button-input")
-//	WebElement dropdownButton;
+	@FindBy(css = "#sc-buy-box-ptc-button .a-button-input")
+	WebElement dropdownButton;
 
 	@FindBy(css = ".a-dropdown-container .a-button-inner:nth-child(1)")
 	WebElement dropdownElement;
@@ -61,7 +61,6 @@ public class CheckOut extends AbstractComponents {
 	}
 
 	public void selectCountry() throws InterruptedException {
-//		Thread.sleep(1000);
 		dropdownElement.click();
 		Thread.sleep(1000);
 		selectEgypt.click();

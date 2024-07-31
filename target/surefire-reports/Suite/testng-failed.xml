@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT" verbose="0">
+  <listeners>
+    <listener class-name="Amazon.AmazonFrameworkDesign.TestComponents.Listeners"/>
+  </listeners>
+  <test thread-count="5" name="submit order Test(failed)" verbose="0">
+    <classes>
+      <class name="Amazon.AmazonFrameworkDesign.Tests.SubmitOrderTest">
+        <methods>
+          <include name="OrderHistoryTest"/>
+          <include name="submitOrderTest"/>
+          <include name="launchApplication"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- Amazon.AmazonFrameworkDesign.Tests.SubmitOrderTest -->
+    </classes>
+  </test> <!-- submit order Test(failed) -->
+  <test thread-count="5" name="Error Validations Test(failed)" verbose="0">
+    <classes>
+      <class name="Amazon.AmazonFrameworkDesign.Tests.ErrorValidationTest">
+        <methods>
+          <include name="loginErrorValidation"/>
+          <include name="productErrorValidation"/>
+          <include name="launchApplication"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- Amazon.AmazonFrameworkDesign.Tests.ErrorValidationTest -->
+    </classes>
+  </test> <!-- Error Validations Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

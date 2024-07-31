@@ -5,8 +5,8 @@
 		<run>
 			<include name="Purchase"></include>
 		</run>
-		
-	</groups>
+	</groups>	
+
   <test thread-count="5" name="submit order Test">
     <classes>
       <class name="Amazon.AmazonFrameworkDesign.Tests.SubmitOrderTest"/>

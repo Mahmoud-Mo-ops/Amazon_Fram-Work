@@ -8,6 +8,7 @@ import org.testng.annotations.Test;
 
 import Amazon.AmazonFrameworkDesign.TestComponents.BaseTest;
 import AmazonFrameWorkDesign.pageObjects.CheckOut;
+import AmazonFrameWorkDesign.pageObjects.LandingPage;
 import AmazonFrameWorkDesign.pageObjects.ProductCatalogue;
 import AmazonFrameWorkDesign.pageObjects.ShoppingCart;
 
@@ -15,10 +16,11 @@ public class ErrorValidationTest extends BaseTest {
 
 	@Test(groups= {"ErrorValidaion"},retryAnalyzer=Retry.class)
 	public void loginErrorValidation() throws IOException, InterruptedException {
-		ProductCatalogue productCatalogue = landing.login("mahmoudei@gmail.com","Berlin@1234567");
-
+		LandingPage landing= new LandingPage(driver);
+	      landing.inValidLogin("mahmoudei@gmail.com");
 		String errorMail=landing.catchError();
-		Assert.assertEquals(errorMail,"We cannot find an account with that email address");
+		Assert.assertEquals(errorMail,"There was a problem");
+
 	}
 	  
 	@Test

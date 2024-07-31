@@ -44,13 +44,83 @@
 			<version>7.10.2</version>
 			<scope>test</scope>
 		</dependency>
-
-
 	</dependencies>
+	<profiles>
+		<profile>
+			<id>Regression</id>
+			<build>
+				<pluginManagement>
+					<plugins>
+						<plugin>
+							<groupId>org.apache.maven.plugins</groupId>
+							<artifactId>maven-surefire-plugin</artifactId>
+							<version>3.3.1</version>
+							<configuration>
+								<suiteXmlFiles>
+									<suiteXmlFile>testSuites/testng.xml</suiteXmlFile>
+								</suiteXmlFiles>
+							</configuration>
+						</plugin>
+					</plugins>
+				</pluginManagement>
+			</build>
+		</profile>
+
+		<profile>
+			<id>Purchase</id>
+			<build>
+				<pluginManagement>
+					<plugins>
+						<plugin>
+							<groupId>org.apache.maven.plugins</groupId>
+							<artifactId>maven-surefire-plugin</artifactId>
+							<version>3.3.1</version>
+							<configuration>
+								<suiteXmlFiles>
+									<suiteXmlFile>testSuites/Purchase.xml</suiteXmlFile>
+								</suiteXmlFiles>
+							</configuration>
+						</plugin>
+					</plugins>
+				</pluginManagement>
+			</build>
+		</profile>
+
+		<profile>
+			<id>ErrorValidation</id>
+			<build>
+				<pluginManagement>
+					<plugins>
+						<plugin>
+							<groupId>org.apache.maven.plugins</groupId>
+							<artifactId>maven-surefire-plugin</artifactId>
+							<version>3.3.1</version>
+							<configuration>
+								<suiteXmlFiles>
+									<suiteXmlFile>testSuites/ErrorValidation.xml</suiteXmlFile>
+								</suiteXmlFiles>
+							</configuration>
+						</plugin>
+					</plugins>
+				</pluginManagement>
+			</build>
+		</profile>
+
+	</profiles>
 
 	<build>
 		<pluginManagement>
 			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-surefire-plugin</artifactId>
+					<version>3.3.1</version>
+					<configuration>
+						<suiteXmlFiles>
+							<suiteXmlFile>testSuites/testng.xml</suiteXmlFile>
+						</suiteXmlFiles>
+					</configuration>
+				</plugin>
 				<!-- Clean Lifecycle -->
 				<plugin>
 					<artifactId>maven-clean-plugin</artifactId>

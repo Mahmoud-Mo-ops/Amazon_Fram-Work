@@ -3,14 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Amazon.AmazonFrameworkDesign.Tests.ErrorValidationTest">
+      <class name="Amazon.AmazonFrameworkDesign.Tests.SubmitOrderTest">
         <methods>
-          <include name="loginErrorValidation"/>
-          <include name="productErrorValidation"/>
+          <include name="OrderHistoryTest"/>
+          <include name="submitOrderTest" invocation-numbers="0 1"/>
           <include name="launchApplication"/>
           <include name="teardown"/>
         </methods>
-      </class> <!-- Amazon.AmazonFrameworkDesign.Tests.ErrorValidationTest -->
+      </class> <!-- Amazon.AmazonFrameworkDesign.Tests.SubmitOrderTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
