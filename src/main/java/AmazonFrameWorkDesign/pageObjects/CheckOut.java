@@ -64,7 +64,7 @@ public class CheckOut extends AbstractComponents {
 		dropdownElement.click();
 		Thread.sleep(1000);
 		selectEgypt.click();
-		Thread.sleep(1000);
+		Thread.sleep(3000);
 	}
 
 	public void entryData(String fullname, String phoneNumberText, String addressText, String buildingNameText,

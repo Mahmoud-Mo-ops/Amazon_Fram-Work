@@ -4,13 +4,31 @@
       "email":"mahmoudeid1840@gmail.com",
       "password":"Berlin@1234567",
      "ProductName":"SAMSUNG",
-     "subProductName":"Galaxy Buds"
+     "subProductName":"Galaxy Buds",
+     "fullname":"Mahmoud",
+      "phoneNumberText":"01090432848",
+      "addressText":"Kafr Asch-Schaich, Gehan Street, next to Elfath Hospital",
+       "buildingNameText":"Eid",
+       "addressCityText":"KFS",
+       "addressDistrictText":"Eid /6",
+     "addressStateText":"Kafr El Sheikh",
+     "governorateText":"Kafr El Sheikh",
+     "landmarkText":"Elfatah"
     },
     {
         "email":"mahmoudeid1840@gmail.com",
         "password":"Berlin@1234567",
-        "ProductName":"iphone 15",
-         "subProductName":"Case"
+        "ProductName":" ",
+         "subProductName":"Case",
+         "fullname":"Mahmoud",
+      "phoneNumberText":"01090432848",
+      "addressText":"Kafr Asch-Schaich, Gehan Street, next to Elfath Hospital",
+       "buildingNameText":"Eid",
+       "addressCityText":"kfs",
+       "addressDistrictText":"Eid /6",
+     "addressStateText":"Kafr El Sheikh",
+     "governorateText":"Kafr El Sheikh",
+     "landmarkText":"Elfatah"
         }
    
    ]

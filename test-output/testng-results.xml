@@ -1,134 +1,251 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="3" total="5" passed="0" failed="2" skipped="0">
+<testng-results ignored="0" total="6" passed="4" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-07-31T21:34:41 EEST" name="Suite" finished-at="2024-07-31T21:36:00 EEST" duration-ms="78455">
+  <suite started-at="2024-08-04T14:19:50 EEST" name="Suite" finished-at="2024-08-04T14:25:08 EEST" duration-ms="317812">
     <groups>
       <group name="Purchase">
-        <method signature="SubmitOrderTest.submitOrderTest(java.util.HashMap)[pri:0, instance:Amazon.AmazonFrameworkDesign.Tests.SubmitOrderTest@957e06]" name="submitOrderTest" class="Amazon.AmazonFrameworkDesign.Tests.SubmitOrderTest"/>
+        <method signature="SubmitOrderTest.submitOrderTest(java.util.HashMap)[pri:0, instance:Amazon.AmazonFrameworkDesign.Tests.SubmitOrderTest@3adcc812]" name="submitOrderTest" class="Amazon.AmazonFrameworkDesign.Tests.SubmitOrderTest"/>
       </group> <!-- Purchase -->
+      <group name="ErrorValidaion">
+        <method signature="ErrorValidationTest.loginErrorValidation()[pri:0, instance:Amazon.AmazonFrameworkDesign.Tests.ErrorValidationTest@68b32e3e]" name="loginErrorValidation" class="Amazon.AmazonFrameworkDesign.Tests.ErrorValidationTest"/>
+      </group> <!-- ErrorValidaion -->
     </groups>
-    <test started-at="2024-07-31T21:34:41 EEST" name="submit order Test" finished-at="2024-07-31T21:36:00 EEST" duration-ms="78422">
+    <test started-at="2024-08-04T14:19:50 EEST" name="submit order Test" finished-at="2024-08-04T14:22:17 EEST" duration-ms="147160">
       <class name="Amazon.AmazonFrameworkDesign.Tests.SubmitOrderTest">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:Amazon.AmazonFrameworkDesign.Tests.SubmitOrderTest@957e06]" started-at="2024-07-31T21:34:41 EEST" name="launchApplication" finished-at="2024-07-31T21:34:58 EEST" duration-ms="16402" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:Amazon.AmazonFrameworkDesign.Tests.SubmitOrderTest@3adcc812]" started-at="2024-08-04T14:19:50 EEST" name="launchApplication" finished-at="2024-08-04T14:20:02 EEST" duration-ms="11913" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="submitOrderTest(java.util.HashMap)[pri:0, instance:Amazon.AmazonFrameworkDesign.Tests.SubmitOrderTest@957e06]" started-at="2024-07-31T21:34:58 EEST" name="submitOrderTest" data-provider="getData" finished-at="2024-07-31T21:35:20 EEST" duration-ms="22103" status="FAIL">
+        <test-method signature="submitOrderTest(java.util.HashMap)[pri:0, instance:Amazon.AmazonFrameworkDesign.Tests.SubmitOrderTest@3adcc812]" started-at="2024-08-04T14:20:02 EEST" name="submitOrderTest" data-provider="getData" finished-at="2024-08-04T14:20:34 EEST" duration-ms="31584" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{subProductName=Galaxy Buds, password=Berlin@1234567, ProductName=SAMSUNG, email=mahmoudeid1840@gmail.com}]]>
+                <![CDATA[{governorateText=Kafr El Sheikh, ProductName=SAMSUNG, addressText=Kafr Asch-Schaich, Gehan Street, next to Elfath Hospital, addressCityText=KFS, phoneNumberText=01090432848, addressStateText=Kafr El Sheikh, landmarkText=Elfatah, password=Berlin@1234567, subProductName=Galaxy Buds, buildingNameText=Eid, addressDistrictText=Eid /6, fullname=Mahmoud, email=mahmoudeid1840@gmail.com}]]>
               </value>
             </param>
           </params>
-          <exception class="java.lang.Error">
-            <message>
-              <![CDATA[Unresolved compilation problem: 
-The method numberOfProducts() is undefined for the type ShoppingCart
-]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.Error: Unresolved compilation problem: 
-The method numberOfProducts() is undefined for the type ShoppingCart
-
-at AmazonFrameWorkDesign.pageObjects.CheckOut.validateNumberOfProduct(CheckOut.java:92)
-at Amazon.AmazonFrameworkDesign.Tests.SubmitOrderTest.submitOrderTest(SubmitOrderTest.java:39)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:794)
-at org.testng.TestRunner.run(TestRunner.java:596)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-at org.testng.TestNG.runSuites(TestNG.java:1063)
-at org.testng.TestNG.run(TestNG.java:1031)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.Error -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- submitOrderTest -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:Amazon.AmazonFrameworkDesign.Tests.SubmitOrderTest@957e06]" started-at="2024-07-31T21:35:20 EEST" name="launchApplication" finished-at="2024-07-31T21:35:35 EEST" duration-ms="14748" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:Amazon.AmazonFrameworkDesign.Tests.SubmitOrderTest@3adcc812]" started-at="2024-08-04T14:20:34 EEST" name="teardown" finished-at="2024-08-04T14:20:34 EEST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:Amazon.AmazonFrameworkDesign.Tests.SubmitOrderTest@3adcc812]" started-at="2024-08-04T14:20:34 EEST" name="launchApplication" finished-at="2024-08-04T14:20:53 EEST" duration-ms="18963" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="submitOrderTest(java.util.HashMap)[pri:0, instance:Amazon.AmazonFrameworkDesign.Tests.SubmitOrderTest@957e06]" started-at="2024-07-31T21:35:35 EEST" name="submitOrderTest" data-provider="getData" finished-at="2024-07-31T21:36:00 EEST" duration-ms="24925" status="FAIL">
+        <test-method signature="submitOrderTest(java.util.HashMap)[pri:0, instance:Amazon.AmazonFrameworkDesign.Tests.SubmitOrderTest@3adcc812]" started-at="2024-08-04T14:20:53 EEST" name="submitOrderTest" data-provider="getData" finished-at="2024-08-04T14:21:28 EEST" duration-ms="35579" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{subProductName=Case, password=Berlin@1234567, ProductName=iphone 15, email=mahmoudeid1840@gmail.com}]]>
+                <![CDATA[{governorateText=Kafr El Sheikh, ProductName=Ihpone  , addressText=Kafr Asch-Schaich, Gehan Street, next to Elfath Hospital, addressCityText=kfs, phoneNumberText=01090432848, addressStateText=Kafr El Sheikh, landmarkText=Elfatah, password=Berlin@1234567, subProductName=i phone , buildingNameText=Eid, addressDistrictText=Eid /6, fullname=Mahmoud, email=mahmoudeid1840@gmail.com}]]>
               </value>
             </param>
           </params>
-          <exception class="java.lang.Error">
-            <message>
-              <![CDATA[Unresolved compilation problem: 
-The method numberOfProducts() is undefined for the type ShoppingCart
-]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.Error: Unresolved compilation problem: 
-The method numberOfProducts() is undefined for the type ShoppingCart
-
-at AmazonFrameWorkDesign.pageObjects.CheckOut.validateNumberOfProduct(CheckOut.java:92)
-at Amazon.AmazonFrameworkDesign.Tests.SubmitOrderTest.submitOrderTest(SubmitOrderTest.java:39)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:794)
-at org.testng.TestRunner.run(TestRunner.java:596)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-at org.testng.TestNG.runSuites(TestNG.java:1063)
-at org.testng.TestNG.run(TestNG.java:1031)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.Error -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- submitOrderTest -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:Amazon.AmazonFrameworkDesign.Tests.SubmitOrderTest@3adcc812]" started-at="2024-08-04T14:21:28 EEST" name="teardown" finished-at="2024-08-04T14:21:28 EEST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:Amazon.AmazonFrameworkDesign.Tests.SubmitOrderTest@3adcc812]" started-at="2024-08-04T14:21:28 EEST" name="launchApplication" finished-at="2024-08-04T14:21:44 EEST" duration-ms="15272" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="OrderHistoryTest()[pri:0, instance:Amazon.AmazonFrameworkDesign.Tests.SubmitOrderTest@3adcc812]" started-at="2024-08-04T14:21:44 EEST" name="OrderHistoryTest" finished-at="2024-08-04T14:22:17 EEST" depends-on-methods="Amazon.AmazonFrameworkDesign.Tests.SubmitOrderTest.submitOrderTest" duration-ms="33625" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OrderHistoryTest -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:Amazon.AmazonFrameworkDesign.Tests.SubmitOrderTest@3adcc812]" started-at="2024-08-04T14:22:17 EEST" name="teardown" finished-at="2024-08-04T14:22:17 EEST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
       </class> <!-- Amazon.AmazonFrameworkDesign.Tests.SubmitOrderTest -->
     </test> <!-- submit order Test -->
-    <test started-at="2024-07-31T21:36:00 EEST" name="Error Validations Test" finished-at="2024-07-31T21:36:00 EEST" duration-ms="1">
+    <test started-at="2024-08-04T14:22:18 EEST" name="Error Validations Test" finished-at="2024-08-04T14:25:08 EEST" duration-ms="170186">
+      <class name="Amazon.AmazonFrameworkDesign.Tests.ErrorValidationTest">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:Amazon.AmazonFrameworkDesign.Tests.ErrorValidationTest@68b32e3e]" started-at="2024-08-04T14:22:18 EEST" name="launchApplication" finished-at="2024-08-04T14:22:37 EEST" duration-ms="18851" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="loginErrorValidation()[pri:0, instance:Amazon.AmazonFrameworkDesign.Tests.ErrorValidationTest@68b32e3e]" started-at="2024-08-04T14:22:37 EEST" name="loginErrorValidation" finished-at="2024-08-04T14:22:43 EEST" duration-ms="6104" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginErrorValidation -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:Amazon.AmazonFrameworkDesign.Tests.ErrorValidationTest@68b32e3e]" started-at="2024-08-04T14:22:43 EEST" name="teardown" finished-at="2024-08-04T14:22:43 EEST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:Amazon.AmazonFrameworkDesign.Tests.ErrorValidationTest@68b32e3e]" started-at="2024-08-04T14:22:43 EEST" name="launchApplication" finished-at="2024-08-04T14:23:16 EEST" duration-ms="32801" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="notSelectedProduct()[pri:0, instance:Amazon.AmazonFrameworkDesign.Tests.ErrorValidationTest@68b32e3e]" started-at="2024-08-04T14:23:16 EEST" name="notSelectedProduct" finished-at="2024-08-04T14:24:19 EEST" duration-ms="63268" status="FAIL">
+          <exception class="org.openqa.selenium.StaleElementReferenceException">
+            <message>
+              <![CDATA[stale element reference: stale element not found
+  (Session info: chrome=127.0.6533.89)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: '4.22.0', revision: 'c5f3146703*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [fedc34463e60194ef7ed2eaa6d88aa75, getElementText {id=f.4AC1C13177694C78368E006D11DB7845.d.878120F7C59B9872B4CC4B02E6EAB458.e.372}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.89, chrome: {chromedriverVersion: 127.0.6533.88 (a2d0cb026721..., userDataDir: C:\Users\COMPUL~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61758}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61758/devtoo..., se:cdpVersion: 127.0.6533.89, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[[[ChromeDriver: chrome on windows (fedc34463e60194ef7ed2eaa6d88aa75)] -> css selector: .puis-card-container]] -> css selector: [id^='a-autoid'][id$='-announce']]
+Session ID: fedc34463e60194ef7ed2eaa6d88aa75]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found
+  (Session info: chrome=127.0.6533.89)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: '4.22.0', revision: 'c5f3146703*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [fedc34463e60194ef7ed2eaa6d88aa75, getElementText {id=f.4AC1C13177694C78368E006D11DB7845.d.878120F7C59B9872B4CC4B02E6EAB458.e.372}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.89, chrome: {chromedriverVersion: 127.0.6533.88 (a2d0cb026721..., userDataDir: C:\Users\COMPUL~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61758}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61758/devtoo..., se:cdpVersion: 127.0.6533.89, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[[[ChromeDriver: chrome on windows (fedc34463e60194ef7ed2eaa6d88aa75)] -> css selector: .puis-card-container]] -> css selector: [id^='a-autoid'][id$='-announce']]
+Session ID: fedc34463e60194ef7ed2eaa6d88aa75
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+at org.openqa.selenium.remote.RemoteWebElement.getText(RemoteWebElement.java:191)
+at AmazonFrameWorkDesign.pageObjects.ProductCatalogue.addProductToCart(ProductCatalogue.java:71)
+at Amazon.AmazonFrameworkDesign.Tests.ErrorValidationTest.notSelectedProduct(ErrorValidationTest.java:45)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.StaleElementReferenceException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- notSelectedProduct -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:Amazon.AmazonFrameworkDesign.Tests.ErrorValidationTest@68b32e3e]" started-at="2024-08-04T14:24:19 EEST" name="teardown" finished-at="2024-08-04T14:24:19 EEST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:Amazon.AmazonFrameworkDesign.Tests.ErrorValidationTest@68b32e3e]" started-at="2024-08-04T14:24:19 EEST" name="launchApplication" finished-at="2024-08-04T14:24:33 EEST" duration-ms="14121" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="productErrorValidation()[pri:0, instance:Amazon.AmazonFrameworkDesign.Tests.ErrorValidationTest@68b32e3e]" started-at="2024-08-04T14:24:33 EEST" name="productErrorValidation" finished-at="2024-08-04T14:25:08 EEST" duration-ms="34353" status="FAIL">
+          <exception class="org.openqa.selenium.StaleElementReferenceException">
+            <message>
+              <![CDATA[stale element reference: stale element not found
+  (Session info: chrome=127.0.6533.89)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: '4.22.0', revision: 'c5f3146703*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [aac2ea861619ad99652e08be8b885c94, getElementText {id=f.CF3F3F38A95E8AC02877BEFADE8BBD97.d.969DEA756901F795226796B89A42316F.e.375}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.89, chrome: {chromedriverVersion: 127.0.6533.88 (a2d0cb026721..., userDataDir: C:\Users\COMPUL~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61912}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61912/devtoo..., se:cdpVersion: 127.0.6533.89, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[[[ChromeDriver: chrome on windows (aac2ea861619ad99652e08be8b885c94)] -> css selector: .puis-card-container]] -> css selector: [id^='a-autoid'][id$='-announce']]
+Session ID: aac2ea861619ad99652e08be8b885c94]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found
+  (Session info: chrome=127.0.6533.89)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: '4.22.0', revision: 'c5f3146703*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [aac2ea861619ad99652e08be8b885c94, getElementText {id=f.CF3F3F38A95E8AC02877BEFADE8BBD97.d.969DEA756901F795226796B89A42316F.e.375}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.89, chrome: {chromedriverVersion: 127.0.6533.88 (a2d0cb026721..., userDataDir: C:\Users\COMPUL~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61912}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61912/devtoo..., se:cdpVersion: 127.0.6533.89, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[[[ChromeDriver: chrome on windows (aac2ea861619ad99652e08be8b885c94)] -> css selector: .puis-card-container]] -> css selector: [id^='a-autoid'][id$='-announce']]
+Session ID: aac2ea861619ad99652e08be8b885c94
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+at org.openqa.selenium.remote.RemoteWebElement.getText(RemoteWebElement.java:191)
+at AmazonFrameWorkDesign.pageObjects.ProductCatalogue.addProductToCart(ProductCatalogue.java:71)
+at Amazon.AmazonFrameworkDesign.Tests.ErrorValidationTest.productErrorValidation(ErrorValidationTest.java:33)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.StaleElementReferenceException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- productErrorValidation -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:Amazon.AmazonFrameworkDesign.Tests.ErrorValidationTest@68b32e3e]" started-at="2024-08-04T14:25:08 EEST" name="teardown" finished-at="2024-08-04T14:25:08 EEST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- Amazon.AmazonFrameworkDesign.Tests.ErrorValidationTest -->
     </test> <!-- Error Validations Test -->
   </suite> <!-- Suite -->
 </testng-results>

@@ -9,26 +9,62 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Suite</th></tr>
-<tr><td><a href="#t0">submit order Test</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">2</td><td class="num">78,422</td><td>Purchase</td><td></td></tr>
-<tr class="stripe"><td><a href="#t1">Error Validations Test</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td>Purchase</td><td></td></tr>
-<tr><th>Total</th><th class="num">0</th><th class="num">0</th><th class="num">0</th><th class="num attn">2</th><th class="num">78,423</th><th colspan="2"></th></tr>
+<tr><td><a href="#t0">submit order Test</a></td><td class="num">3</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">147,160</td><td></td><td></td></tr>
+<tr class="stripe"><td><a href="#t1">Error Validations Test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num attn">2</td><td class="num">170,186</td><td></td><td></td></tr>
+<tr><th>Total</th><th class="num">4</th><th class="num">0</th><th class="num">0</th><th class="num attn">2</th><th class="num">317,346</th><th colspan="2"></th></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">submit order Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="2">Amazon.AmazonFrameworkDesign.Tests.SubmitOrderTest</td><td><a href="#m0">submitOrderTest</a></td><td rowspan="2">1722450898318</td><td rowspan="2">22103</td></tr><tr class="failedeven"><td><a href="#m1">submitOrderTest</a></td></tr></tbody>
-<tbody id="t1"><tr><th colspan="4" class="invisible"/></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">submit order Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="3">Amazon.AmazonFrameworkDesign.Tests.SubmitOrderTest</td><td><a href="#m0">OrderHistoryTest</a></td><td rowspan="1">1722770504228</td><td rowspan="1">33625</td></tr><tr class="passedeven"><td><a href="#m1">submitOrderTest</a></td><td rowspan="2">1722770402806</td><td rowspan="2">31584</td></tr><tr class="passedeven"><td><a href="#m2">submitOrderTest</a></td></tr></tbody>
+<tbody id="t1"><tr><th colspan="4">Error Validations Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="2">Amazon.AmazonFrameworkDesign.Tests.ErrorValidationTest</td><td><a href="#m3">notSelectedProduct</a></td><td rowspan="1">1722770596083</td><td rowspan="1">63268</td></tr><tr class="failedeven"><td><a href="#m4">productErrorValidation</a></td><td rowspan="1">1722770673784</td><td rowspan="1">34353</td></tr><tr><th colspan="4">Error Validations Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">Amazon.AmazonFrameworkDesign.Tests.ErrorValidationTest</td><td><a href="#m5">loginErrorValidation</a></td><td rowspan="1">1722770557175</td><td rowspan="1">6104</td></tr></tbody>
 </table>
-<h2>submit order Test</h2><h3 id="m0">Amazon.AmazonFrameworkDesign.Tests.SubmitOrderTest#submitOrderTest</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{subProductName=Galaxy Buds, password=Berlin@1234567, ProductName=SAMSUNG, email=mahmoudeid1840@gmail.com}</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Error: Unresolved compilation problem: 
-	The method numberOfProducts() is undefined for the type ShoppingCart
-
-	at AmazonFrameWorkDesign.pageObjects.CheckOut.validateNumberOfProduct(CheckOut.java:92)
-	at Amazon.AmazonFrameworkDesign.Tests.SubmitOrderTest.submitOrderTest(SubmitOrderTest.java:39)
+<h2>submit order Test</h2><h3 id="m0">Amazon.AmazonFrameworkDesign.Tests.SubmitOrderTest#OrderHistoryTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">Amazon.AmazonFrameworkDesign.Tests.SubmitOrderTest#submitOrderTest</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{governorateText=Kafr El Sheikh, ProductName=SAMSUNG, addressText=Kafr Asch-Schaich, Gehan Street, next to Elfath Hospital, addressCityText=KFS, phoneNumberText=01090432848, addressStateText=Kafr El Sheikh, landmarkText=Elfatah, password=Berlin@1234567, subProductName=Galaxy Buds, buildingNameText=Eid, addressDistrictText=Eid /6, fullname=Mahmoud, email=mahmoudeid1840@gmail.com}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">Amazon.AmazonFrameworkDesign.Tests.SubmitOrderTest#submitOrderTest</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{governorateText=Kafr El Sheikh, ProductName=Ihpone  , addressText=Kafr Asch-Schaich, Gehan Street, next to Elfath Hospital, addressCityText=kfs, phoneNumberText=01090432848, addressStateText=Kafr El Sheikh, landmarkText=Elfatah, password=Berlin@1234567, subProductName=i phone , buildingNameText=Eid, addressDistrictText=Eid /6, fullname=Mahmoud, email=mahmoudeid1840@gmail.com}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Error Validations Test</h2><h3 id="m3">Amazon.AmazonFrameworkDesign.Tests.ErrorValidationTest#notSelectedProduct</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found
+  (Session info: chrome=127.0.6533.89)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: &apos;4.22.0&apos;, revision: &apos;c5f3146703*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.10&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [fedc34463e60194ef7ed2eaa6d88aa75, getElementText {id=f.4AC1C13177694C78368E006D11DB7845.d.878120F7C59B9872B4CC4B02E6EAB458.e.372}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.89, chrome: {chromedriverVersion: 127.0.6533.88 (a2d0cb026721..., userDataDir: C:\Users\COMPUL~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61758}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61758/devtoo..., se:cdpVersion: 127.0.6533.89, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[[[ChromeDriver: chrome on windows (fedc34463e60194ef7ed2eaa6d88aa75)] -&gt; css selector: .puis-card-container]] -&gt; css selector: [id^=&apos;a-autoid&apos;][id$=&apos;-announce&apos;]]
+Session ID: fedc34463e60194ef7ed2eaa6d88aa75
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.getText(RemoteWebElement.java:191)
+	at AmazonFrameWorkDesign.pageObjects.ProductCatalogue.addProductToCart(ProductCatalogue.java:71)
+	at Amazon.AmazonFrameworkDesign.Tests.ErrorValidationTest.notSelectedProduct(ErrorValidationTest.java:45)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 27 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">Amazon.AmazonFrameworkDesign.Tests.SubmitOrderTest#submitOrderTest</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{subProductName=Case, password=Berlin@1234567, ProductName=iphone 15, email=mahmoudeid1840@gmail.com}</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Error: Unresolved compilation problem: 
-	The method numberOfProducts() is undefined for the type ShoppingCart
-
-	at AmazonFrameWorkDesign.pageObjects.CheckOut.validateNumberOfProduct(CheckOut.java:92)
-	at Amazon.AmazonFrameworkDesign.Tests.SubmitOrderTest.submitOrderTest(SubmitOrderTest.java:39)
+... Removed 32 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">Amazon.AmazonFrameworkDesign.Tests.ErrorValidationTest#productErrorValidation</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found
+  (Session info: chrome=127.0.6533.89)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: &apos;4.22.0&apos;, revision: &apos;c5f3146703*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.10&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [aac2ea861619ad99652e08be8b885c94, getElementText {id=f.CF3F3F38A95E8AC02877BEFADE8BBD97.d.969DEA756901F795226796B89A42316F.e.375}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.89, chrome: {chromedriverVersion: 127.0.6533.88 (a2d0cb026721..., userDataDir: C:\Users\COMPUL~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61912}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61912/devtoo..., se:cdpVersion: 127.0.6533.89, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[[[ChromeDriver: chrome on windows (aac2ea861619ad99652e08be8b885c94)] -&gt; css selector: .puis-card-container]] -&gt; css selector: [id^=&apos;a-autoid&apos;][id$=&apos;-announce&apos;]]
+Session ID: aac2ea861619ad99652e08be8b885c94
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.getText(RemoteWebElement.java:191)
+	at AmazonFrameWorkDesign.pageObjects.ProductCatalogue.addProductToCart(ProductCatalogue.java:71)
+	at Amazon.AmazonFrameworkDesign.Tests.ErrorValidationTest.productErrorValidation(ErrorValidationTest.java:33)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 27 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h2>Error Validations Test</h2></body>
+... Removed 32 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">Amazon.AmazonFrameworkDesign.Tests.ErrorValidationTest#loginErrorValidation</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+</body>
 </html>

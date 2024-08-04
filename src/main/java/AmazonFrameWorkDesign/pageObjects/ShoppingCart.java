@@ -35,6 +35,7 @@ public class ShoppingCart extends AbstractComponents {
 	}
 
 	public String numberOfProducts() {	
+		waitForElement(selectedProductText);
 		String selectedProductText = this.selectedProductText.getText(); // Get the text content from WebElement
 
 		// Extract the number of items

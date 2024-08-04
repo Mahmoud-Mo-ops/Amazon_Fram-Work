@@ -13,7 +13,7 @@ import AmazonFrameWorkDesign.pageObjects.ProductCatalogue;
 import AmazonFrameWorkDesign.pageObjects.ShoppingCart;
 
 public class ErrorValidationTest extends BaseTest {
-
+///ENGTER WRONG MAIL 
 	@Test(groups= {"ErrorValidaion"},retryAnalyzer=Retry.class)
 	public void loginErrorValidation() throws IOException, InterruptedException {
 		LandingPage landing= new LandingPage(driver);
@@ -22,11 +22,11 @@ public class ErrorValidationTest extends BaseTest {
 		Assert.assertEquals(errorMail,"There was a problem");
 
 	}
-	  
+  
 	@Test
 	public void productErrorValidation() throws IOException, InterruptedException {
 		String ProductName = "SAMSUNG";
-		String subProductName = "I Phone";
+		String subProductName = "SAMSUNG";
 		ProductCatalogue productCatalogue = landing.login("mahmoudeid1840@gmail.com", "Berlin@1234567");
 		productCatalogue.searchField(ProductName);
 		productCatalogue.findProductByName(subProductName);
@@ -36,5 +36,16 @@ public class ErrorValidationTest extends BaseTest {
 		Assert.assertTrue(match);
 	}
 	
+	@Test
+	public void notSelectedProduct() throws IOException, InterruptedException {
+		String ProductName = "SAMSUNG";
+		ProductCatalogue productCatalogue = landing.login("mahmoudeid1840@gmail.com", "Berlin@1234567");
+		productCatalogue.searchField(ProductName);
+		productCatalogue.findProductByName(" ");
+		productCatalogue.addProductToCart(" ");
+		ShoppingCart shoppingCar = productCatalogue.clickOnCard();
+		boolean match = shoppingCar.verifyProduct(ProductName);
+		Assert.assertTrue(match);
+	}
 	
 }

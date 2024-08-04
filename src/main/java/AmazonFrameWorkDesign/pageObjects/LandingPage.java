@@ -37,6 +37,7 @@ public class LandingPage extends AbstractComponents {
 	@FindBy(xpath="//h4[@class='a-alert-heading' and text()='There was a problem']")
 	WebElement errorMailMessage;
 
+	
 	public void goToWebsite() {
 		driver.get("https://www.amazon.com");
 
@@ -64,9 +65,16 @@ public class LandingPage extends AbstractComponents {
 		continueElement.click();
 	}
 	
+	
 	public String catchError() throws InterruptedException {
 		Thread.sleep(5000);
 		waitForElement(errorMailMessage);
 		return errorMailMessage.getText();
-	}	
+	}
+
+   
+
+
+	
+
 }
